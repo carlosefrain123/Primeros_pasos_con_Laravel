@@ -1,0 +1,17 @@
+----Empezar a crear el proyecto:
+composer global require laravel/installer
+laravel -v
+clear
+laravel new ejemplo
+0
+------------------Comenzamos
+cd C:\xampp\htdocs\laravelA
+----Crear base de datos
+php artisan migrate
+----Instalar las rutas el Login y el register
+composer require laravel/ui
+php artisan ui vue --auth
+----Plantilla tradicional Laravel, dar estilos al Login y resgister
+npm i
+npm run dev->Me funciono con eso
+npm run development
