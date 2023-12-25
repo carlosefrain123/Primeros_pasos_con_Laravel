@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,9 +47,15 @@ Route::get('articulos', function () {
 
 /* ================== */
 //TODO: Se coloca nombre a la URL completa
-Route::get('/ruta', function () {
+/* Route::get('/ruta', function () {
     return "Hola soy una ruta";
-})->name('operacion');
+})->name('operacion'); */
+
+Route::namespace('Admin')-> group(function () {
+    Route::get('/micontroller1', [AdminController::class, 'index1']);
+    Route::get('/micontroller2', [AdminController::class, 'index2']);
+    Route::get('/micontroller3', [AdminController::class, 'index3']);
+});
 
 Auth::routes();
 
