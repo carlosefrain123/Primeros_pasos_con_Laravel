@@ -57,6 +57,17 @@ Route::namespace('Admin')-> group(function () {
     Route::get('/micontroller3', [AdminController::class, 'index3']);
 });
 
+Route::prefix('seccion')->group(function () {
+    Route::get('/primera',function(){
+        return 'Primera...';
+    });
+    Route::get('/segunda',function(){
+        return 'Segunda...';
+    });
+    Route::get('/tercera',function(){
+        return 'Tercer...';
+    });
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
