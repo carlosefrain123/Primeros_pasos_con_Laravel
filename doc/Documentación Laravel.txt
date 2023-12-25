@@ -15,3 +15,6 @@ php artisan ui vue --auth
 npm i
 npm run dev->Me funciono con eso
 npm run development
+=============OJO:
+@extends, viene hacer el include
+@yield(content) y @section('content')--Lo que viene hacer es que te de el contenido que esta en otra carpeta. Acuerdate cuando hacias el include en lo que es main, head, etc
